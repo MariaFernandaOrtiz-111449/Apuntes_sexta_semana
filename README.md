@@ -1,8 +1,8 @@
 # Apuntes-Sexta semana
-Apuntes control de movimiento - Segundo Corte-Séptima y Octava Semana
+Apuntes control de movimiento - Segundo Corte-Sexta Semana
 
-# PERFILES DE MOVIMIENTO
-En esta clase se abordó el diseño de perfiles en el entorno virtual de Simscape, con énfasis en las diversas conexiones posibles y su comportamiento dinámico según la configuración seleccionada. Se profundizó en la asignación y funcionamiento de cada eje, analizando su movimiento, rango de rotación, y las interacciones mecánicas asociadas. Asimismo, se exploró el diseño detallado de cada perfil, destacando la posibilidad de ajustar el tamaño de los ejes y simular desplazamientos mediante los efectores proporcionados por el sistema, optimizando así la precisión y funcionalidad del modelo virtual.
+# Diseño de Eslabones en Simulink
+El diseño de eslabones en Simulink con Simscape Multibody permite modelar sistemas mecánicos compuestos por cuerpos rígidos conectados mediante articulaciones. Un eslabón es una pieza mecánica que transmite movimiento o fuerza dentro de un mecanismo, como en un brazo robótico, una biela-manivela o una suspensión automotriz.
 
 ## 1. Definición movimiento de perfil
 El movimiento de un perfil está determinado como el movimiento dentro de una trayectoría para cumplir el recorrido de un punto A a un punto B. Existen diferentes casos dentro del movimiento de perfil que está dado por la cantidad de ejes que se quieran mover al tiempo.
