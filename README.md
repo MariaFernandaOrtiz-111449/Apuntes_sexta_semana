@@ -36,6 +36,15 @@ De esta manera, el PS Converter actúa como un puente entre el mundo matemático
 
 ## 4. Ejercicios
 
+### Ejemplo Manivela
+
+En principio realizamos el montaje dentro del espacio de trabajo Simscape Multibody; en primera instancia se coloca la transformación de ejes con el rigid transform para manejar el eje que deseemos dentro del modelo de movimiento, seguidamente se conectará un prismático el cual ejercerá el movimiento de las piezas dentro del diseño, esta salida se visualizará mediante un scope.
+
+Además, se realizó la conexión de un revolution joint el cual genera el movimiento en el efector final del sistema para darle accionamiento al actuador, se realizó la conexión a nuestros perfiles de movimiento y se repite el proceso 2 instancias más para darle movimiento a cada uno de los perfiles de movimiento; por último se realiza un reajuste de ejes para poder mover cada una de las piezas sobre el mismo eje coordinado.
+
+
+![](Manivela.jpg)
+
 ## 5. Conclusiones
 
 * El diseño de eslabones en Simulink con Simscape Multibody permite modelar con alta fidelidad mecanismos mecánicos reales. Gracias al uso de bloques como Solid, Revolute Joint y Prismatic Joint, se puede representar el comportamiento dinámico de sistemas con movimiento rotacional o traslacional.
