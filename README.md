@@ -52,7 +52,7 @@ Además, se realizó la conexión de un revolution joint el cual genera el movim
 
 Para el desarrollo de este ejemplo utilizamos el diseño de un perfil de movimiento el cual realizará la acción desiganda en el sistema mediante el bloque prismático. Para este proceso, en primera medida se realiza el reajuste de ejes para poder realizar el movimiento del sistema en el mismo eje coordinado. Una vez realizado la conexión de los sistemas se conectará directo al efector al cual se le aplicará movimiento y la nueva dirección de funcinamiento destinada por los planos de referencia con el que cuenta el sistema. 
 
-![]()
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/b95e4ac4a06fc853ab1a897a0adaa2e2cc8fc5cd/primastico.jpg)
 
 
 ![]()
