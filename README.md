@@ -36,7 +36,7 @@ De esta manera, el PS Converter actúa como un puente entre el mundo matemático
 
 ## 4. Ejercicios
 
-### Ejemplo Manivela
+### Ejemplo Biela Manivela
 
 En principio realizamos el montaje dentro del espacio de trabajo Simscape Multibody; en primera instancia se coloca la transformación de ejes con el rigid transform para manejar el eje que deseemos dentro del modelo de movimiento, seguidamente se conectará un prismático el cual ejercerá el movimiento de las piezas dentro del diseño, esta salida se visualizará mediante un scope.
 
@@ -44,6 +44,18 @@ Además, se realizó la conexión de un revolution joint el cual genera el movim
 
 
 ![](Manivela.jpg)
+
+
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/e5fc03c8607472c62c4ebbcd9183101668ee143d/Manivela2.jpg)
+
+### Ejemplo Prismático
+
+Para el desarrollo de este ejemplo utilizamos el diseño de un perfil de movimiento el cual realizará la acción desiganda en el sistema mediante el bloque prismático. Para este proceso, en primera medida se realiza el reajuste de ejes para poder realizar el movimiento del sistema en el mismo eje coordinado. Una vez realizado la conexión de los sistemas se conectará directo al efector al cual se le aplicará movimiento y la nueva dirección de funcinamiento destinada por los planos de referencia con el que cuenta el sistema. 
+
+![]()
+
+
+![]()
 
 ## 5. Conclusiones
 
