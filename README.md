@@ -62,9 +62,10 @@ Para el desarrollo de este ejemplo utilizamos el diseño de un perfil de movimie
 Para este sistema se utilizará el cuadro de revolute joinel cual irá conectado a cada uno de nuestros perfiles de movimiento conectados y asignados mediante el sistema de coordenadas que se repite periodicamente 2 secciones más. La conexión de este sistema nos permite poder ajustar el movimiento de los 3 perfiles al tiempo sin generar ningún
 bloquedo frente al movimiento de los demás
 
-![]()
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/6d3108f30bae0e863b266a62ae9ac5f851186f45/movimiento%20triple.jpg)
 
 ![]()
+
 ## 5. Conclusiones
 
 * El diseño de eslabones en Simulink con Simscape Multibody permite modelar con alta fidelidad mecanismos mecánicos reales. Gracias al uso de bloques como Solid, Revolute Joint y Prismatic Joint, se puede representar el comportamiento dinámico de sistemas con movimiento rotacional o traslacional.
