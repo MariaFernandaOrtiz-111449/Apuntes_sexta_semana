@@ -64,7 +64,7 @@ bloquedo frente al movimiento de los demás
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/6d3108f30bae0e863b266a62ae9ac5f851186f45/movimiento%20triple.jpg)
 
-![]()
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/c88fc8a30b33635756d34a00cbed491971fa9908/movimiento%20triple%202.jpg)
 
 ## 5. Conclusiones
 
