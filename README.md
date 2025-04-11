@@ -55,7 +55,7 @@ Para el desarrollo de este ejemplo utilizamos el diseño de un perfil de movimie
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/b95e4ac4a06fc853ab1a897a0adaa2e2cc8fc5cd/primastico.jpg)
 
 
-![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/f07a8938c5f45b0ebb052263f02411fdec653240/README.md)
+
 
 ### Ejemplo Revolute Join
 
