@@ -38,15 +38,73 @@ De esta manera, el PS Converter actúa como un puente entre el mundo matemático
 
 ### Ejemplo Biela Manivela
 
-En principio realizamos el montaje dentro del espacio de trabajo Simscape Multibody; en primera instancia se coloca la transformación de ejes con el rigid transform para manejar el eje que deseemos dentro del modelo de movimiento, seguidamente se conectará un prismático el cual ejercerá el movimiento de las piezas dentro del diseño, esta salida se visualizará mediante un scope.
+Este mecanismo clásico puede modelarse con tres cuerpos rígidos: manivela, biela y pistón.
 
-Además, se realizó la conexión de un revolution joint el cual genera el movimiento en el efector final del sistema para darle accionamiento al actuador, se realizó la conexión a nuestros perfiles de movimiento y se repite el proceso 2 instancias más para darle movimiento a cada uno de los perfiles de movimiento; por último se realiza un reajuste de ejes para poder mover cada una de las piezas sobre el mismo eje coordinado.
-
+La Figura 1 presenta una simulación realizada en Simulink y Simscape Multibody de un sistema mecánico tradicional compuesto por manivela, biela y corredera. Este tipo de mecanismo es común en dispositivos como motores de combustión interna y compresores, debido a su capacidad para transformar un movimiento giratorio en uno rectilíneo.
 
 ![](Manivela.jpg)
 
+*Fig 1. Ejemplo*
+
+**Organización del Modelo**
+
+El modelo ha sido desarrollado utilizando bloques esenciales de Simscape Multibody, que permiten una representación precisa del comportamiento físico del sistema:
+
+* Solver Configuration: Se encarga de definir el tipo de solucionador que se utilizará para ejecutar la simulación.
+
+* World Frame: Proporciona un marco de referencia fijo e inercial para el sistema.
+
+* Mechanism Configuration: Permite establecer condiciones globales como la dirección y magnitud de la gravedad.
+
+* Simulink-PS Converter: Convierte señales generadas en Simulink (como una señal senoidal) al entorno físico de Simscape.
+
+* PS-Simulink Converter: Transforma señales físicas de salida en señales que pueden ser interpretadas por bloques de Simulink para visualización (como el Scope).
+
+**Descripción de los Componentes**
+
+*Manivela*
+
+* Representada por un cuerpo sólido que gira en torno a un eje fijo mediante una junta rotacional (Revolute Joint).
+
+* Su rotación es inducida por una señal senoidal, que simula el funcionamiento de un eje motriz.
+
+*Biela*
+
+* Conecta la manivela con la corredera utilizando dos Revolute Joints.
+
+* Su función principal es transmitir el movimiento rotacional de la manivela y convertirlo en desplazamiento lineal que será aplicado a la corredera.
+
+*Corredera*
+
+* Elemento que se mueve en línea recta a lo largo de un solo eje, restringido por una junta prismática (Prismatic Joint).
+
+* El desplazamiento de la corredera se visualiza mediante un bloque Scope de Simulink.
+
+*Rigid Transform*
+
+* Permite posicionar y orientar adecuadamente los cuerpos rígidos dentro del entorno tridimensional del modelo.
+
+**Principio de Funcionamiento**
+
+El sistema convierte el giro oscilante de la manivela, generado por la señal de entrada, en un movimiento lineal alternativo en la corredera. La biela es el vínculo intermedio que transmite y adapta este movimiento entre ambos componentes.
+
+Esta simulación resulta útil tanto para evaluar diseños mecánicos como para analizar el comportamiento dinámico del mecanismo bajo diferentes condiciones de entrada.
+
+**Visualización de Resultados**
+
+La Figura 2 muestran capturas del modelo durante la simulación. En estas imágenes se pueden distinguir claramente los tres elementos principales:
+
+* La manivela (representada en naranj, a la izquierda),
+
+* La biela (en azul, ubicada en el centro),
+
+* La corredera (en morado, a la derecha).
+
+Estas vistas permiten apreciar el comportamiento dinámico del mecanismo y cómo interactúan sus componentes a lo largo del ciclo de operación.
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/e5fc03c8607472c62c4ebbcd9183101668ee143d/Manivela2.jpg)
+
+*Fig 2. Diseño Final Ejemplo 1*
 
 ### Ejemplo Prismático
 
@@ -54,7 +112,7 @@ Para el desarrollo de este ejemplo utilizamos el diseño de un perfil de movimie
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/b95e4ac4a06fc853ab1a897a0adaa2e2cc8fc5cd/primastico.jpg)
 
-
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/938c67e1de56ec37ecddeb3aa6c1a55cbf42a3a0/primastico2.jpg)
 
 
 ### Ejemplo Revolute Join
