@@ -106,14 +106,88 @@ Estas vistas permiten apreciar el comportamiento dinámico del mecanismo y cómo
 
 *Fig 2. Diseño Final Ejemplo 1*
 
+**Observaciones de la Animación**
+
+Durante la animación del modelo, se pueden apreciar los siguientes aspectos clave del funcionamiento del mecanismo:
+
+* El conjunto de cuerpos rígidos responde de forma fluida y continua a la señal senoidal aplicada como entrada.
+
+* La biela desempeña el papel de eslabón dinámico, adaptando constantemente su orientación para sincronizar tanto con el movimiento giratorio de la manivela como con el desplazamiento lineal de la corredera.
+
+* Todo el sistema opera de manera coordinada, replicando con alta fidelidad un ciclo mecánico completo, similar al que se produce en el funcionamiento de un pistón dentro de un motor de combustión interna.
+
 ### Ejemplo Prismático
 
-Para el desarrollo de este ejemplo utilizamos el diseño de un perfil de movimiento el cual realizará la acción desiganda en el sistema mediante el bloque prismático. Para este proceso, en primera medida se realiza el reajuste de ejes para poder realizar el movimiento del sistema en el mismo eje coordinado. Una vez realizado la conexión de los sistemas se conectará directo al efector al cual se le aplicará movimiento y la nueva dirección de funcinamiento destinada por los planos de referencia con el que cuenta el sistema. 
+A continuación, se expone un ejemplo de simulación mecánica diseñado para ilustrar el comportamiento dinámico de un cubo en movimiento. Este modelo tiene como propósito aplicar los conceptos previamente abordados, tales como cuerpos rígidos, juntas mecánicas y señales físicas, todo ello dentro del entorno de Simulink y Simscape Multibody.
+
+En este caso particular, el sistema simula un movimiento vertical oscilatorio del cubo, que se manifiesta como un desplazamiento alternante hacia arriba y hacia abajo a lo largo de un único eje, es decir, un movimiento lineal unidimensional. Este patrón de movimiento se implementa mediante una Prismatic Joint, que limita el desplazamiento del cuerpo rígido a un solo grado de libertad en línea recta.
+
+El movimiento oscilatorio del cubo se genera a partir de una señal senoidal física, la cual se obtiene desde una señal convencional de Simulink utilizando un bloque Simulink-PS Converter. Esto permite controlar la frecuencia y amplitud del movimiento, generando un desplazamiento cíclico y continuo.
+
+A partir del diagrama que se presenta a continuación, se ofrecerá una descripción breve del sistema, detallando sus elementos principales y el modo en que interactúan dentro del entorno de simulación.
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/b95e4ac4a06fc853ab1a897a0adaa2e2cc8fc5cd/primastico.jpg)
 
+*Fig 3. Ejemplo*
+
+**Esquema Básico de Simulación en Simscape Multibody**
+
+El siguiente esquema representa una configuración elemental dentro de Simscape Multibody, diseñada para simular el comportamiento mecánico de un cuerpo rígido en movimiento oscilatorio vertical. Este modelo emplea bloques esenciales que permiten visualizar y analizar el desplazamiento de un cubo bajo una entrada senoidal. A continuación, se detallan los elementos principales que componen el sistema:
+
+*Solver Configuration, World Frame y Mechanism Configuration*
+
+Estos tres bloques forman el conjunto mínimo indispensable para iniciar una simulación física en Simscape Multibody.
+
+* Solver Configuration establece los parámetros necesarios para el solucionador numérico.
+
+* World Frame define el sistema de coordenadas global, actuando como referencia inercial.
+
+* Mechanism Configuration permite configurar aspectos generales del modelo, como la dirección de la gravedad.
+
+*Sine Wave*
+
+Este bloque genera una señal senoidal que determina el patrón de movimiento deseado.
+
+* Dicha señal representa un desplazamiento periódico que imita un comportamiento de subida y bajada constante, el cual será aplicado al sistema.
+
+*Simulink-PS Converter*
+
+* Convierte la señal senoidal producida en Simulink a una señal física compatible con Simscape, haciendo posible su conexión directa con elementos del entorno físico, como las juntas o bloques mecánicos.
+
+*Prismatic Joint*
+
+Permite definir un grado de libertad lineal entre dos cuerpos.
+
+* En este caso, restringe el movimiento del cubo para que solo pueda desplazarse verticalmente a lo largo de un único eje, lo que permite representar un movimiento puramente traslacional.
+
+*Brick Solid*
+
+Representa el cuerpo rígido dentro de la simulación (el cubo).
+
+* En este bloque se configuran propiedades físicas del objeto como su forma geométrica, tamaño y masa, necesarias para su correcto comportamiento dinámico en el entorno de simulación.
+
+
+**Simulación del Movimiento**
+
+Durante la simulación, se puede apreciar el comportamiento dinámico del cubo modelado mediante el bloque Solid. Este cuerpo rígido está conectado a una junta prismática (Prismatic Joint), la cual restringe su movimiento exclusivamente al eje vertical (eje Y), permitiendo únicamente desplazamientos lineales en esa dirección.
+
+La señal senoidal aplicada como entrada a la junta prismática genera un movimiento de oscilación vertical en el cubo, el cual sube y baja de manera cíclica con el paso del tiempo. Este comportamiento refleja un patrón de traslación alternante controlado por los parámetros de frecuencia y amplitud definidos en la señal.
+
+**Observaciones de la Animación**
+
+La animación generada durante la simulación permite observar con claridad el comportamiento del cubo bajo la acción de la señal de entrada. Se destacan los siguientes aspectos:
+
+*El cubo realiza un movimiento ascendente y descendente suave, directamente influenciado por la amplitud y frecuencia de la señal senoidal configurada.
+
+*Su trayectoria permanece perfectamente alineada con el eje Y, lo cual es posible gracias a las restricciones impuestas por la junta prismática, que limita el desplazamiento a un único eje.
+
+*La respuesta del sistema es continua y precisa, evidenciando una integración efectiva entre los componentes físicos del entorno Simscape y las señales generadas desde Simulink.
+
+Estos resultados confirman que el modelo ha sido correctamente configurado, validando su capacidad para representar de forma realista un sistema físico con movimiento oscilatorio controlado.
+
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/938c67e1de56ec37ecddeb3aa6c1a55cbf42a3a0/primastico2.jpg)
 
+*Fig 4. Diseño Final Ejemplo 1*
 
 ### Ejemplo Revolute Join
 
