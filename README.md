@@ -248,3 +248,12 @@ La Figura 6 muestran la simulación de un mecanismo conformado por tres eslabone
 * Al entender los conceptos fundamentales de los eslabones y su modelado en Simulink, se sienta la base para implementar sistemas de control, optimización de mecanismos, o incluso inteligencia artificial aplicada a sistemas mecánicos.
 
 ## 7. Referencias
+
+* MathWorks. (2024). Simscape Multibody User’s Guide. The MathWorks, Inc. https://www.mathworks.com/help/physmod/sm/
+Guía oficial de MathWorks que explica el uso de bloques como Solid, Revolute Joint, Prismatic Joint y Simulink-PS Converter.
+
+* MathWorks. (2024). Simulink Documentation. The MathWorks, Inc. https://www.mathworks.com/help/simulink/
+Referencia general del entorno Simulink para la creación y control de modelos mediante señales y algoritmos.
+
+* The MathWorks, Inc. (2020, abril 9). Physical Modeling Tutorial, Part 6: Introduction to Multibody Simulation [Video]. YouTube. https://www.youtube.com/watch?v=lItmRlH4iBw
+Tutorial visual sobre modelado físico y simulación multibody con herramientas de MathWorks.
