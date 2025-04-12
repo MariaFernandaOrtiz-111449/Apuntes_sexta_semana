@@ -190,51 +190,51 @@ Estos resultados confirman que el modelo ha sido correctamente configurado, vali
 *Fig 4. Diseño Final Ejemplo 1*
 
 ### Ejemplo Revolute Join
+
 Un modelo que incluye tres eslabones unidos de forma secuencial mediante juntas rotacionales (Revolute Joints) permite simular con precisión el funcionamiento de sistemas articulados, tales como brazos robóticos, manipuladores o extremidades mecánicas.
 
-La Figura  muestra un mecanismo formado por tres eslabones conectados entre sí a través de juntas rotacionales. Esta disposición es típica en estructuras articuladas empleadas en aplicaciones como brazos robóticos y manipuladores.
-
-
-
-
-Componentes del Modelo
-
-Solver Configuration: Establece los parámetros necesarios para resolver el modelo físico durante la simulación.
-
-World Frame: Define el sistema de coordenadas global usado como referencia en el modelo.
-
-Mechanism Configuration: Permite ajustar características físicas del entorno, como la presencia de gravedad.
-
-Rigid Transform: Determina la posición inicial del primer eslabón en relación con el marco global.
-
-Estructura del Mecanismo
-
-Eslabón 1:
-Está conectado al World Frame a través de una Revolute Joint, lo que permite el primer grado de rotación del sistema, funcionando como una base giratoria.
-
-Eslabón 2:
-Se une al extremo del primer eslabón mediante una segunda Revolute Joint, permitiendo el movimiento relativo entre ambos. Un bloque de sólido define su forma y masa.
-
-Eslabón 3:
-Este último eslabón está vinculado al segundo mediante una tercera Revolute Joint y actúa como el extremo libre o efector final del mecanismo.
-
-Funcionamiento del Sistema
-
-Movimiento rotacional: Las juntas rotacionales permiten aplicar un control de rotación individual a cada eslabón.
-
-Detección angular: Sensores ubicados en las articulaciones proporcionan información sobre los ángulos de cada junta.
-
-Visualización de resultados: La señal angular de alguna de las juntas se dirige a un bloque Scope mediante un conversor PS-Simulink, lo que permite observar la respuesta dinámica del sistema.
-
+La Figura 5 muestra un mecanismo formado por tres eslabones conectados entre sí a través de juntas rotacionales. Esta disposición es típica en estructuras articuladas empleadas en aplicaciones como brazos robóticos y manipuladores.
 
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/6d3108f30bae0e863b266a62ae9ac5f851186f45/movimiento%20triple.jpg)
 
 *Fig 5. Esquema del Sistema*
 
+**Componentes del Modelo**
+
+* Solver Configuration: Establece los parámetros necesarios para resolver el modelo físico durante la simulación.
+
+* World Frame: Define el sistema de coordenadas global usado como referencia en el modelo.
+
+* Mechanism Configuration: Permite ajustar características físicas del entorno, como la presencia de gravedad.
+
+* Rigid Transform: Determina la posición inicial del primer eslabón en relación con el marco global.
+
+**Estructura del Mecanismo**
+
+Eslabón 1:
+* Está conectado al World Frame a través de una Revolute Joint, lo que permite el primer grado de rotación del sistema, funcionando como una base giratoria.
+
+Eslabón 2:
+* Se une al extremo del primer eslabón mediante una segunda Revolute Joint, permitiendo el movimiento relativo entre ambos. Un bloque de sólido define su forma y masa.
+
+Eslabón 3:
+* Este último eslabón está vinculado al segundo mediante una tercera Revolute Joint y actúa como el extremo libre o efector final del mecanismo.
+
+**Funcionamiento del Sistema**
+
+* Movimiento rotacional: Las juntas rotacionales permiten aplicar un control de rotación individual a cada eslabón.
+
+* Detección angular: Sensores ubicados en las articulaciones proporcionan información sobre los ángulos de cada junta.
+
+* Visualización de resultados: La señal angular de alguna de las juntas se dirige a un bloque Scope mediante un conversor PS-Simulink, lo que permite observar la respuesta dinámica del sistema.
+
+La Figura 6 muestran la simulación de un mecanismo conformado por tres eslabones unidos mediante juntas rotacionales (Revolute Joints). Este tipo de sistema puede interpretarse como una representación conceptual de un brazo robótico en funcionamiento, donde cada eslabón realiza movimientos rotacionales en respuesta a las señales de entrada aplicadas en sus articulaciones.
+
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_sexta_semana/blob/c88fc8a30b33635756d34a00cbed491971fa9908/movimiento%20triple%202.jpg)
 
 *Fig 6. Simulación 3 Eslabones*
+
 ## 5. Conclusiones
 
 * El diseño de eslabones en Simulink con Simscape Multibody permite modelar con alta fidelidad mecanismos mecánicos reales. Gracias al uso de bloques como Solid, Revolute Joint y Prismatic Joint, se puede representar el comportamiento dinámico de sistemas con movimiento rotacional o traslacional.
